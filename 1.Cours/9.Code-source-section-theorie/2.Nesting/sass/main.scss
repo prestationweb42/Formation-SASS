@@ -1,0 +1,58 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #111;
+  color: #f1f1f1;
+}
+
+h1 {
+  font-size: 44px;
+  margin-bottom: 42px;
+}
+
+/* L'imbrication permet de styliser les éléments impriqués les uns dans les autres en évitant certaines répétitions. */
+
+body .list {
+  list-style: none;
+  margin-bottom: 44px;
+
+  &:hover {
+    background: green;
+  }
+
+  .item {
+    // background-color: salmon;
+    span {
+      background: blue;
+    }
+  }
+}
+
+
+/* Fonctionne bien avec la BEM notation */
+
+.card {
+  padding: 20px;
+  border: 1px solid #f1f1f1;
+  border-radius: 5px;
+
+  &__heading {
+    font-size: 24px;
+    margin-bottom: 6px;
+  }
+  &__content {
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+  &__link {
+    color: #f1f1f1;
+  }
+  &__link--salmon {
+    color: salmon;
+  }
+}

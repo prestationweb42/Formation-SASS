@@ -1,0 +1,86 @@
+@charset "UTF-8";
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #111;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f1f1f1;
+  padding: 40px;
+}
+
+h1 {
+  font-size: 44px;
+  margin-bottom: 42px;
+}
+
+/* 
+  On peut utiliser un système d'erreurs avec SASS
+
+  @warn : Envoie un warning dans le terminal.
+  @error : Bloque la compilation du script et envoie un message sur le site et dans le terminal.
+  @debug : Envoie simplement un message dans le terminal.
+*/
+/* Instruction If */
+.profile-card {
+  width: 200px;
+  padding: 10px;
+}
+
+.blog-card {
+  width: 300px;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+/* If...Else avec une mixin liée au thème  */
+.container {
+  background-color: #111;
+  color: #f1f1f1;
+}
+
+/* Utiliser une boucle for avec SASS */
+.fs-1 {
+  font-size: 10px;
+}
+
+.fs-2 {
+  font-size: 20px;
+}
+
+.fs-3 {
+  font-size: 30px;
+}
+
+.fs-4 {
+  font-size: 40px;
+}
+
+.fs-5 {
+  font-size: 50px;
+}
+
+.fs-6 {
+  font-size: 60px;
+}
+
+.fs-7 {
+  font-size: 70px;
+}
+
+.fs-8 {
+  font-size: 80px;
+}
+
+.fs-9 {
+  font-size: 90px;
+}
+
+.fs-10 {
+  font-size: 100px;
+}
+
+/*# sourceMappingURL=main.css.map */

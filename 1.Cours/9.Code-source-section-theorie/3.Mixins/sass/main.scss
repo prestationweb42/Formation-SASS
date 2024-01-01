@@ -1,0 +1,98 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #111;
+  color: #f1f1f1;
+}
+
+h1 {
+  font-size: 44px;
+  margin-bottom: 42px;
+}
+
+/* Les mixins sont des bouts de code réutilisables, ils peuvent utiliser des paramètres à la manière d'une fonction. */
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  height: 100vh;
+  @include flex-center;
+}
+
+@mixin addTitle($type,$size,$font-family,$color:#111) {
+  #{$type}{
+    font-size: $size;
+    font-family: $font-family;
+    color: $color;
+  }
+}
+@include addTitle('h1',80px,arial,#f1f1f1);
+
+@mixin table-screen {
+  @media only screen and (max-width: 900px) {
+    @content;
+  }
+}
+
+// @include table-screen {
+//   body {
+//     background-color: salmon;
+//   }
+// };
+
+@mixin fade($type, $duration: 0.4s, $easing: ease-out) {
+  @if $type == "hide"{ 
+    visibility: hidden;
+    opacity: 0;
+    transition:  
+    visibility $duration $easing,
+    opacity $duration $easing;
+  }
+  @else if $type == "show" {
+    visibility: visible;
+    opacity: 1;
+    transition:  
+    opacity $duration $easing;
+  }
+}
+
+// h1 {
+//   @include fade("show");
+
+//   &:hover {
+//     @include fade("hide");
+//   }
+// }
+
+@mixin underline-animation($background-color, $height: clamp(1px, 0.05em, 4px), $transform-origin: left){
+  content: "";
+  display: block;
+  width: 100%;
+  height: $height;
+  bottom: 0;
+  left: 0;
+  background-color: $background-color;
+  transform-origin: $transform-origin;
+  transition: transform 0.4s ease-out;
+  transform: scaleX(0);
+  will-change: transform;
+}
+
+h1 {
+  position: relative;
+  font-size: 80px;
+}
+h1::after {
+  @include underline-animation(red, $transform-origin: center);
+}
+h1:hover::after {
+  transform: scaleX(1);
+}

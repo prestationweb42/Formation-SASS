@@ -1,0 +1,59 @@
+@charset "UTF-8";
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #111;
+  color: #f1f1f1;
+  padding: 40px;
+}
+
+h1 {
+  font-size: 44px;
+  margin-bottom: 42px;
+}
+
+/* 
+  Extend permet de créer des listes de sélecteurs en "étendant" un sélecteur, c'est un moyen de partager du code à plusieurs éléments.
+*/
+.base-button, .cta {
+  background-color: #f1f1f1;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.cta {
+  padding: 8px 4px;
+  min-width: 125px;
+}
+
+form .base-button, form .cta {
+  width: 100%;
+}
+
+/* 
+   Placeholder.
+   Similaire à l'extension d'une règle, mais sans avoir à en créer une.
+   On crée simplement un placeholder qu'on partage à différentes règles.
+*/
+.content, h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f1f1f1;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 44px;
+  margin-bottom: 8px;
+}
+
+.content {
+  margin-bottom: 20px;
+}
+
+
+
+/*# sourceMappingURL=main.css.map */

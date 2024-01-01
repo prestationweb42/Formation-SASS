@@ -1,0 +1,28 @@
+@use "./theme" as colors;
+@use "./typography";
+
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: colors.$blue-dark;
+  color: #f1f1f1;
+}
+
+h1 {
+  $red-contrast: crimson;
+  --red-contrast: crimson;
+  font-family: typography.$font-heading-serif;
+  font-size: typography.$fs-80;
+  margin-bottom: 42px;
+  // color: $red-contrast;
+}
+h1 span {
+  // color: $red-contrast;
+  color: var(--red-contrast);
+}

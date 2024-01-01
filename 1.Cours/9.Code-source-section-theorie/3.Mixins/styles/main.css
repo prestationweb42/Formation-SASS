@@ -1,0 +1,56 @@
+@charset "UTF-8";
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #111;
+  color: #f1f1f1;
+}
+
+h1 {
+  font-size: 44px;
+  margin-bottom: 42px;
+}
+
+/* Les mixins sont des bouts de code réutilisables, ils peuvent utiliser des paramètres à la manière d'une fonction. */
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 80px;
+  font-family: arial;
+  color: #f1f1f1;
+}
+
+h1 {
+  position: relative;
+  font-size: 80px;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: clamp(1px, 0.05em, 4px);
+  bottom: 0;
+  left: 0;
+  background-color: red;
+  transform-origin: center;
+  transition: transform 0.4s ease-out;
+  transform: scaleX(0);
+  will-change: transform;
+}
+
+h1:hover::after {
+  transform: scaleX(1);
+}
+
+/*# sourceMappingURL=main.css.map */

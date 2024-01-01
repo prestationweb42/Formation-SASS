@@ -1,0 +1,110 @@
+@charset "UTF-8";
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #111;
+  color: #f1f1f1;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 40px;
+}
+
+h1 {
+  font-size: 44px;
+  margin-bottom: 42px;
+}
+
+/* SASS supporte beaucoup de types de valeur différents, et chaque type a ses propres caractéristiques. */
+/* 
+  Les nombres.
+  Les nombres peuvent être simple(Ex: 50), ou contenir une unité(Ex: 16px) ou des unités complexes(Ex: 10px * 10px = 100px*px). 
+  L'écriture scientifique est également supportée (Ex : 5e3 = 125)
+*/
+/* Fonctionnement des unités de mesures dans les calculs */
+/* 
+  Les chaînes de caractères
+  Tout mot délimité ou non par des guillemets/apostrophes est considéré comme une chaîne avec SASS.
+*/
+/* 
+  Les couleurs.
+  Les couleurs representent un type à part entière.
+  On peut les écrire de trois façons différentes : 
+  - En hexadécimal : #f1f1f1;
+  - En RGB(a) : rgba(255,255,255,1);
+  - En hsl(a) : hsla(0, 100%, 50%,0.5);
+*/
+/*
+  Les booléens true et false.
+  On peut les utiliser dans des conditions et dans certaines fonctions utilitaires.
+  On peut les passer à des mixins / fonctions.
+  Ils peuvent être retourner par une comparaison.
+*/
+/*
+  Les listes.
+
+  Les listes correspondent à des tableaux, elles permettent de stocker plusieurs valeurs.
+  Les listes sont simplement representées par une suite de valeurs.
+  Vous pouvez séparer ces valeurs par des virgules ou des espaces, tant que vous restez consistant dans la liste. 
+  Enfin, vous avez le choix de les entourer de parenthèses ou non, sauf si vous décidez de créer une liste vide, dans ce cas-là il faudra utiliser deux parenthèses ().
+
+*/
+.text-40 {
+  font-size: 40px;
+}
+
+.text-50 {
+  font-size: 50px;
+}
+
+.text-80 {
+  font-size: 80px;
+}
+
+.card-animal--cheval {
+  background-image: url("assets/animals/cheval.jpg");
+}
+
+.card-animal--lapin {
+  background-image: url("assets/animals/lapin.jpg");
+}
+
+.card-animal--canard {
+  background-image: url("assets/animals/canard.jpg");
+}
+
+.card-animal--renard {
+  background-image: url("assets/animals/renard.jpg");
+}
+
+/*
+  Les maps.
+  Les maps représentent des objets contenant des séries de clés(propriété)-valeur.
+*/
+.main-title--red-contrast {
+  color: crimson;
+}
+
+.base-text--red-contrast {
+  color: crimson;
+}
+
+.main-title--blue-main {
+  color: blue;
+}
+
+.base-text--blue-main {
+  color: blue;
+}
+
+.main-title--green-validation {
+  color: green;
+}
+
+.base-text--green-validation {
+  color: green;
+}
+
+/*# sourceMappingURL=main.css.map */

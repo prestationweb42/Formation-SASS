@@ -1,0 +1,16 @@
+// @use "../base/reset";
+// @use "../base/theme";
+@use "../base";
+
+@use "../components/buttons";
+@use "../components/links";
+@use "../layouts/footer";
+@use "../layouts/navbar";
+
+// @use "../forward";
+
+body {
+  background: #111;
+  color: base.$orange-shade;
+  padding: 40px;
+}

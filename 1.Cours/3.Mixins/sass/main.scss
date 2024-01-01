@@ -1,0 +1,17 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #111;
+  color: #f1f1f1;
+}
+
+h1 {
+  font-size: 44px;
+  margin-bottom: 42px;
+}
+
+/* Les mixins sont des bouts de code réutilisables, ils peuvent utiliser des paramètres à la manière d'une fonction. */

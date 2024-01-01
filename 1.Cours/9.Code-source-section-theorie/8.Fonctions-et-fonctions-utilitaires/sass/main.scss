@@ -1,0 +1,61 @@
+@use "sass:math";
+@use "sass:string";
+
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #111;
+  color: #f1f1f1;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 40px;
+}
+
+h1 {
+  font-size: 44px;
+  margin-bottom: 42px;
+}
+
+// Les fonctions ressemblent aux mixins, mais retournent seulement une valeur.
+@function px-to-rem($px-value){
+  @return ($px-value / 16) + rem;
+}
+h1 {
+  font-size: px-to-rem(42);
+}
+
+// Nombre indéfini d'arguments
+@function sum($numbers...) {
+  $sum: 0;
+  @debug $numbers;
+  @each $number in $numbers {
+    $sum: $sum + $number;
+  }
+  @return $sum;
+}
+@debug sum(10,10,10);
+
+// Les fonctions et valeurs utilitaires
+
+
+// il faut importer @use 'sass:math'; tout en haut du fichier
+
+@debug math.$pi;
+
+$number: 4.12457;
+@debug math.ceil($number);
+@debug math.floor($number);
+
+@debug math.max(888,111,444);
+@debug math.min(888,111,444);
+@debug math.pow(2,10);
+
+
+// il faut importer "sass:string"
+
+@debug string.index("Helvetica Neue", "Helvetica");
+@debug string.insert("Roboto Bold", " Mono", 7);
+@debug string.length("test");
+

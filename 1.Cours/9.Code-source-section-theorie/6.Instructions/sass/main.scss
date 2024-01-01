@@ -1,0 +1,115 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #111;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f1f1f1;
+  padding: 40px;
+}
+
+h1 {
+  font-size: 44px;
+  margin-bottom: 42px;
+}
+
+
+/* 
+  On peut utiliser un système d'erreurs avec SASS
+
+  @warn : Envoie un warning dans le terminal.
+  @error : Bloque la compilation du script et envoie un message sur le site et dans le terminal.
+  @debug : Envoie simplement un message dans le terminal.
+*/
+
+// @warn "Attention !";
+// @debug 99;
+// @error "Valeur interdite !";
+
+// @debug 5px * 88;
+
+
+/* Instruction If */
+$boolValue: true; 
+
+@if $boolValue {
+  // @debug "Valeur truthy";
+}
+
+
+// Opérateur d'égalité
+$number: 457;
+
+@if $number == 457 {
+  @debug "Number est égal à 457";
+}
+@debug "5" == 5;
+
+
+// Comparaisons 
+$padding1: 25px;
+$padding2: 50px;
+
+@if $padding1 < $padding2 {
+  // @debug "Padding2 est plus grand";
+  // body {
+  //   padding: $padding2;
+  // }
+}
+
+
+
+// Comparaisons complexes 
+$dark-theme: true;
+$max-width: 1100px;
+$main-font: roboto;
+
+@if $dark-theme and $max-width == 1100px and $main-font == roboto {
+  // @debug "Trois conditions vérifiées";
+}
+
+
+
+// Utilisation dans un mixin
+
+@mixin card($width, $rounded: false){
+  width: $width;
+  padding: 10px;
+
+  @if $rounded {
+    border-radius: 15px;
+  }
+}
+.profile-card {
+  @include card(200px, $rounded: false);
+}
+.blog-card {
+  @include card(300px, $rounded: true);
+}
+
+/* If...Else avec une mixin liée au thème  */
+
+@mixin theme-colors($light-theme: true){
+  @if $light-theme {
+    background-color: #f1f1f1;
+    color: #111;
+  }
+  @else {
+    background-color: #111;
+    color: #f1f1f1;
+  }
+}
+
+.container {
+  @include theme-colors(false);
+}
+
+/* Utiliser une boucle for avec SASS */
+
+@for $i from 1 through 10 {
+  .fs-#{$i}{
+    font-size: $i * 10px;
+  }
+}

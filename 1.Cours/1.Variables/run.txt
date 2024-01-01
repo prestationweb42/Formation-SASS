@@ -1,0 +1,12 @@
+control version node :
+Node -npm -v
+
+control version npm :
+npm -v
+
+install sass :
+npm install -g sass
+
+
+run sass watch :
+sass --watch .\sass\main.scss ./style/main.css

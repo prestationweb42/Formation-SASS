@@ -1,0 +1,33 @@
+@use "sass:math";
+@use "sass:string";
+
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #111;
+  color: #f1f1f1;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 40px;
+}
+
+h1 {
+  font-size: 44px;
+  margin-bottom: 42px;
+}
+
+// Les fonctions ressemblent aux mixins, mais retournent seulement une valeur.
+
+
+// Nombre indéfini d'arguments
+
+// Les fonctions et valeurs utilitaires
+
+// il faut importer @use 'sass:math'; tout en haut du fichier
+
+
+// il faut importer "sass:string"
+
+

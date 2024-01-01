@@ -1,0 +1,33 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.c-base-button {
+  padding: 8px;
+  background-color: orange;
+}
+
+.c-base-link {
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.l-main-footer {
+  text-align: center;
+  font-size: 18px;
+}
+
+.l-main-navbar {
+  padding: 8px;
+  text-align: center;
+}
+
+body {
+  background: #111;
+  color: #facf7d;
+  padding: 40px;
+}
+
+/*# sourceMappingURL=main.css.map */

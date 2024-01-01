@@ -1,0 +1,14 @@
+/* Setting section_test with SASS */
+/* variable color */
+/* Setting section_test */
+.section_test {
+  height: 50vh;
+  background-color: #e8ffed;
+  border: 2px solid #00ff37;
+}
+
+.section_test h1 {
+  text-align: center;
+}
+
+/*# sourceMappingURL=main.css.map */
