@@ -10,3 +10,6 @@ npm install -g sass
 
 run sass watch :
 sass --watch .\sass\main.scss ./style/main.css
+
+or with the script into package.json
+npm run sass

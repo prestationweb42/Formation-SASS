@@ -1,7 +1,12 @@
 /* Setting section_test with SASS */
+/* Import Partials */
+// @import "typo";
+@use "typo" as typo;
 
 /* variable color */
 $lightbleu: #00ff37;
+
+
 
 /* Setting section_test */
 .section_test {
@@ -11,4 +16,19 @@ $lightbleu: #00ff37;
 }
 .section_test h1 {
     text-align: center;
+    font-size: typo.$font-size-h1;
+    font-family: typo.$font-fam-h1;
+}
+.section_test h2 {
+    text-align: center;
+    font-size: typo.$font-size-h2;
+    font-family: typo.$font-fam-h2;
+}
+.section_test p {
+    text-align: center;
+    font-size: typo.$font-size-p;
+    font-family: typo.$font-fam-p;
+    display: block;
+    width: 600px;
+    margin: auto;
 }

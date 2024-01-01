@@ -1,4 +1,11 @@
 /* Setting section_test with SASS */
+/* Import Partials */
+/* Partial  font family */
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani&display=swap");
+/* variable font family */
+/* variable font size */
 /* variable color */
 /* Setting section_test */
 .section_test {
@@ -9,6 +16,23 @@
 
 .section_test h1 {
   text-align: center;
+  font-size: 4em;
+  font-family: "Acme";
+}
+
+.section_test h2 {
+  text-align: center;
+  font-size: 2.5em;
+  font-family: "Space Grotesk";
+}
+
+.section_test p {
+  text-align: center;
+  font-size: 1.2em;
+  font-family: "Rajdhani";
+  display: block;
+  width: 600px;
+  margin: auto;
 }
 
 /*# sourceMappingURL=main.css.map */
