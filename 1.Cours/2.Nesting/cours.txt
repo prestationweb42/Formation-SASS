@@ -1,0 +1,5 @@
+Cours SASS - Le Nesting -> l'imbrication
+
+Le Nesting ou l'imbrication permet de styliser les éléments imbriqués les uns dans les autres en évitant certaines répétitions. 
+
+Fonctionne bien avec la BEM notation 

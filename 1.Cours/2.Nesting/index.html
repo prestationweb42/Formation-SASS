@@ -1,15 +1,34 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cours SASS</title>
-    <link rel="stylesheet" href="./styles/main.css" />
-  </head>
-  <body>
-    <h1>Les imbrications (nesting).</h1>
-
-
-
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cours SASS</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <section class="section">
+            <h1>Les imbrications (nesting).</h1>
+            <ul class="list">
+                <li class="item item-1">Item 1</li>
+                <li class="item item-2">Item 2</li>
+                <li class="item item-3">Item 3</li>
+                <li class="item item-4">Item 4</li>
+                <li class="item item-5">Item 5</li>
+                <li class="item item-6">Item 6</li>
+            </ul>
+            <!-- BEM Notation -->
+            <h2>BEM Notation</h2>
+            <div class="card">
+              <p class="card__heading">
+                Card Heading.
+              </p>
+              <p class="card__content">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, veritatis, impedit sed magnam voluptates asperiores consequatur sit in distinctio nisi ullam similique pariatur vero illo?
+              </p>
+              <a href="#" class="card__link">Link 1</a>
+              <a href="#" class="card__link card__link--salmon">Link 2</a>
+            </div>
+        </section>
+    </body>
 </html>
