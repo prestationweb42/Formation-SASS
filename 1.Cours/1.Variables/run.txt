@@ -4,12 +4,15 @@ Node -npm -v
 control version npm :
 npm -v
 
-install sass :
-npm install -g sass
+initialiser npm dans le dossier
+npm init
 
+install sass dans le dossier :
+npm install -g sass
 
 run sass watch :
 sass --watch .\sass\main.scss ./style/main.css
 
 or with the script into package.json
+ "sass": "sass --watch ./sass/main.scss ./style/main.css",
 npm run sass
