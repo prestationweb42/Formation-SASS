@@ -4,7 +4,7 @@ Node -npm -v
 control version npm :
 npm -v
 
-initialiser npm dans le dossier
+initialiser npm dans le dossier -> package.json
 npm init
 
 install sass dans le dossier :
